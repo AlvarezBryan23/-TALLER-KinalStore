@@ -1,6 +1,6 @@
-import mongoose, { Schema, model, version } from "mongoose";
+import { Schema, model } from "mongoose";
 
-const userSchema = Schema({
+const UserSchema = Schema({
     name:{
         type:String,
         required: [true, "Name is required"],
@@ -15,6 +15,11 @@ const userSchema = Schema({
         type:String,
         required: true,
         unique: true
+    },
+    password:{
+        type:String,
+        required: true,
+        minLength: 8
     },
     email: {
         type:String,
@@ -43,7 +48,12 @@ const userSchema = Schema({
 {
     versionKey: false,
     timeStamps: true
-}
-)
+})
 
-export default mongoose.model("User", userSchema)
+UserSchema.methods.toJSON = function(){
+    const {password, _id, ...usuario} = this.toObject()
+    usuario.uid = _id
+    return usuario
+}
+
+export default model("User", UserSchema)
