@@ -25,17 +25,17 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "jose",
+											"value": "Luna",
 											"type": "text"
 										},
 										{
 											"key": "surname",
-											"value": "braulio",
+											"value": "Espuma",
 											"type": "text"
 										},
 										{
 											"key": "username",
-											"value": "jbraulio",
+											"value": "LEspuma",
 											"type": "text"
 										},
 										{
@@ -45,7 +45,7 @@
 										},
 										{
 											"key": "email",
-											"value": "jbraulio@gmail.com",
+											"value": "LEspuma@gmail.com",
 											"type": "text"
 										},
 										{
@@ -56,16 +56,159 @@
 										{
 											"key": "profilePicture",
 											"type": "file",
-											"src": "/C:/Users/Dell/Pictures/WhatsApp Image 2025-01-23 at 11.07.07 PM.jpeg"
+											"src": "/C:/Users/Informatica/Pictures/Screenshots/Captura de pantalla 2025-02-04 103529.png"
 										},
 										{
 											"key": "phone",
-											"value": "45697812",
+											"value": "12345678",
 											"type": "text"
 										}
 									]
 								},
 								"url": "http://localhost:3009/kinalStore/v1/auth/register"
+							},
+							"response": []
+						},
+						{
+							"name": "Login U",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"lLizandro\",\r\n    \"password\": \"Bry22an$\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3009/kinalStore/v1/auth/login"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Listar U",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Lima",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "Lizandro",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "lLizandro",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Bry22an$",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "lLizandro@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "ADMIN_ROLE",
+											"type": "text"
+										},
+										{
+											"key": "profilePicture",
+											"type": "file",
+											"src": "/C:/Users/Informatica/Pictures/Screenshots/Captura de pantalla 2025-02-05 082015.png"
+										},
+										{
+											"key": "phone",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:3009/kinalStore/v1/user/"
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar U",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Lima",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "Lizandro",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "lLizandro",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Bry22an$",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "lLizandro@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "ADMIN_ROLE",
+											"type": "text"
+										},
+										{
+											"key": "profilePicture",
+											"type": "file",
+											"src": "/C:/Users/Informatica/Pictures/Screenshots/Captura de pantalla 2025-02-05 082015.png"
+										},
+										{
+											"key": "phone",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:3009/kinalStore/v1/user/deleteUser/67ad1b39bb5734c1c610725e"
 							},
 							"response": []
 						}
