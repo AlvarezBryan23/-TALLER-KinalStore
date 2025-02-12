@@ -6,11 +6,11 @@ const CURRENT_DIR = dirname(fileURLToPath(import.meta.url))
 const MIMETYPES = ["image/jpeg", "image/png", "image/jpg"]
 const MAX_SIZE = 100000000
 
-const createMulterConfig = (destinationPath) => {
+const createMulterConfig = (destinationFolder) => {
     return multer({
         storage: multer.diskStorage({
             destination: (req, file, cb) =>{
-                const fullPath = join(CURRENT_DIR, destinationPath)
+                const fullPath = join(CURRENT_DIR, destinationFolder)
                 req.filePath =  fullPath;
                 cb(null, fullPath)
             },
@@ -31,4 +31,3 @@ const createMulterConfig = (destinationPath) => {
 }
 
 export const uploadProfilePicture = createMulterConfig("../../public/uploads/profile-pictures")
-export const uploadProducts = createMulterConfig("../../public/uploads/products-pictures")
