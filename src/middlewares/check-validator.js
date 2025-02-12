@@ -1,11 +1,20 @@
-import { check } from "express-validator";
+import { body } from "express-validator";
 import { existeEmail } from "../helpers/db-validator.js";
 import { validarCampos } from "./validar-campos.js";
 
 export const registerValidator = [
-    check("name", "El nombre es obligatorio").not().isEmpty(),
-    check("email", "Ingrese un correo válido").isEmail(),
-    check("email").custom(existeEmail),
+    body("name", "El nombre es obligatorio").not().isEmpty(),
+    body("username", "El username es obligatorio").not().isEmpty(), 
+    body("email", "El correo es obligatorio").not().isEmpty(),
+    body("email", "Ingrese un correo válido").isEmail(),
+    body("email").custom(existeEmail),
+    body("password").isStrongPassword({
+        minLength: 8,
+        minLowercase: 1,
+        minUppercase: 1,
+        minNumbers: 1,
+        minSymbols: 0
+    }),
     validarCampos
 ]
 

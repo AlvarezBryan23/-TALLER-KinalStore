@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "5c240a2c-d640-4878-a866-f7751172b004",
+		"name": "API-STORE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37585469"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register U",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "jose",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "braulio",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "jbraulio",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Bry22an$",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "jbraulio@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "CLIENT_ROLE",
+											"type": "text"
+										},
+										{
+											"key": "profilePicture",
+											"type": "file",
+											"src": "/C:/Users/Dell/Pictures/WhatsApp Image 2025-01-23 at 11.07.07 PM.jpeg"
+										},
+										{
+											"key": "phone",
+											"value": "45697812",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://localhost:3009/kinalStore/v1/auth/register"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

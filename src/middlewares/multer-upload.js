@@ -1,8 +1,8 @@
 import multer from "multer";
-import { dinarme, extname, join} from "path"
+import { dirname, extname, join} from "path"
 import { fileURLToPath } from "url";
 
-const CURRENT_DIR = dinarme(fileURLToPath(import.meta.url))
+const CURRENT_DIR = dirname(fileURLToPath(import.meta.url))
 const MIMETYPES = ["image/jpeg", "image/png", "image/jpg"]
 const MAX_SIZE = 100000000
 
@@ -30,5 +30,5 @@ const createMulterConfig = (destinationPath) => {
     })
 }
 
-export const uploadProfilePicture = createMulterConfig("../public/uploads/profile-pictures")
-export const uploadProducts = createMulterConfig("../public/uploads/products-pictures")
+export const uploadProfilePicture = createMulterConfig("../../public/uploads/profile-pictures")
+export const uploadProducts = createMulterConfig("../../public/uploads/products-pictures")
