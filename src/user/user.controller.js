@@ -51,15 +51,15 @@ export const deleteUser = async(req, res) =>{
 
 export const updateUser = async(req, res) =>{
     try{
-        const { uid } = req.params;
+        const { id } = req.params;
         const data = req.body;
 
-        const user = await User.findByIdAndUpdate(uid, data, {new: true});
+        const user = await User.findByIdAndUpdate(id, data, {new: true});
 
         res.status(200).json({
             success: true,
             message: "Usuario actualizado",
-            user
+            user,
         });
     }catch(err){
         res.status(500).json({

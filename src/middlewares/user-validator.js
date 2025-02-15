@@ -33,6 +33,7 @@ export const loginValidator = [
 export const updateUserValidator = [
     param("id").isMongoId().withMessage("No es un ID válido"),
     param("id").custom(userExits),
+    body("role").optional().isIn(["ADMIN_ROLE", "USER_ROLE"]).withMessage("Rol no válido"),
     validarCampos,
     deleteFileOnError,
     handleErrors

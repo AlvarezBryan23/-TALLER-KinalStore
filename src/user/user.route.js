@@ -11,6 +11,6 @@ router.get("/", getUsers)
 
 router.delete("/deleteUser/:uid", deleteUserValidator, deleteUser)
 
-router.put("/updateUser/:uid", updateUserValidator, updateUser)
+router.put("/updateUser/:id", updateUserValidator, updateUser)
 
 export default router
