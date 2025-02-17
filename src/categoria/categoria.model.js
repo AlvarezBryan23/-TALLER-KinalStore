@@ -17,9 +17,9 @@ const categoriaSchema = Schema({
         enum:["ELECTRONICA", "ROPA", "HOGAR_COCINA", "JUGUETES", "DEPORTE", "MUSICA", 
             "ALIMENTOS", "PELICULAS", "LIBROS", "ACCESORIOS"]
     },
-    keeper:{
+    usuario:{
         type: Schema.Types.ObjectId,
-        ref: "User",
+        ref: 'user',
         required: true
     },
     status:{
