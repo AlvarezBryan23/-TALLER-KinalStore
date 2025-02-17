@@ -17,11 +17,6 @@ const categoriaSchema = Schema({
         enum:["ELECTRONICA", "ROPA", "HOGAR_COCINA", "JUGUETES", "DEPORTE", "MUSICA", 
             "ALIMENTOS", "PELICULAS", "LIBROS", "ACCESORIOS"]
     },
-    usuario:{
-        type: Schema.Types.ObjectId,
-        ref: 'user',
-        required: true
-    },
     status:{
         type:Boolean,
         default:true
