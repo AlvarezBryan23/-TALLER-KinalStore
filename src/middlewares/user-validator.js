@@ -1,6 +1,6 @@
 import { body, param } from "express-validator";
 import { existeEmail, userExits } from "../helpers/db-validator.js";
-import { validarCampos } from "./validar-campos.js";    
+import { validarCampos } from "./validar-campos.js";
 import { handleErrors } from "./handleErrors.js";
 import { deleteFileOnError } from "./delete-file-on-errors.js";
 
@@ -36,6 +36,14 @@ export const updateUserValidator = [
     body("role").optional().isIn(["ADMIN_ROLE", "USER_ROLE"]).withMessage("Rol no válido"),
     validarCampos,
     deleteFileOnError,
+    handleErrors
+]
+
+export const updatePasswordValidator = [
+    param("id").isMongoId().withMessage("No es un ID válido de Mongo DB"),
+    param("id").custom(userExits),
+    body("newPassword").isLength({ min: 8 }).withMessage("La contraseña debe tener 8 caracteres mínimo"),
+    validarCampos,
     handleErrors
 ]
 
