@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5c240a2c-d640-4878-a866-f7751172b004",
+		"_postman_id": "cd540455-8dac-4539-addc-600f169e2f93",
 		"name": "API-STORE",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "37585469"
@@ -25,17 +25,17 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "Luna",
+											"value": "Michael",
 											"type": "text"
 										},
 										{
 											"key": "surname",
-											"value": "Espuma",
+											"value": "Jackson",
 											"type": "text"
 										},
 										{
 											"key": "username",
-											"value": "LEspuma",
+											"value": "MJ",
 											"type": "text"
 										},
 										{
@@ -45,7 +45,7 @@
 										},
 										{
 											"key": "email",
-											"value": "LEspuma@gmail.com",
+											"value": "MichaelJ@gmail.com",
 											"type": "text"
 										},
 										{
@@ -60,7 +60,7 @@
 										},
 										{
 											"key": "phone",
-											"value": "12345678",
+											"value": "23567498",
 											"type": "text"
 										}
 									]

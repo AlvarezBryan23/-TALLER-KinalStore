@@ -6,16 +6,10 @@ const categoriaSchema = Schema({
         required: [true, "Category name is required"],
         maxLength: [50, "Category cannot exced 25 characters"]
     },
-    description:{
-        type: String,
-        required: [true, "Description is required"],
-        maxLength: [25, "Description cannot exced 25 characters"]
-    },
     role:{
         type:String,
         required: true,
-        enum:["ELECTRONICA", "ROPA", "HOGAR_COCINA", "JUGUETES", "DEPORTE", "MUSICA", 
-            "ALIMENTOS", "PELICULAS", "LIBROS", "ACCESORIOS"]
+        enum:["ADMIN_ROLE"]
     },
     status:{
         type:Boolean,
