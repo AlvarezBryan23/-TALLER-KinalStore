@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken"
-import { token } from "morgan"
+
 
 export const generateJWT = (uid = " ") =>{
     return new Promise((resolve, reject) => {
@@ -18,10 +18,7 @@ export const generateJWT = (uid = " ") =>{
                         message: err.message
                     })
                 }else{
-                    resolve({
-                        success: true,
-                        token
-                    })
+                    resolve(token)
                 }
             }
         )

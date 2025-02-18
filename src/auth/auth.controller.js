@@ -1,6 +1,6 @@
 import { hash, verify } from "argon2"
 import User from "../user/user.model.js"
-
+import { generateJWT } from "../helpers/generate-jwt.js"
 
 export const register = async (req, res) =>{
     try{
@@ -53,8 +53,7 @@ export const login = async(req, res) =>{
         return res.status(200).json({
             message: "Inicio de sesión exitoso",
             userDetails:{
-                token: token,
-                profilePicture: user.profilePicture
+                token: token
             }
         })
     }catch(err){

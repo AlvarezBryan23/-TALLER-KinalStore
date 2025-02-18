@@ -1,10 +1,12 @@
 'use strict'
 
 import Categoria from "./categoria.model.js";
+import { generateJWT } from "../helpers/generate-jwt.js";
 
 export const saveCategoria = async(req, res) =>{
     try{
         const data = req.body
+        
 
         const categoria = new Categoria({
             ...data
