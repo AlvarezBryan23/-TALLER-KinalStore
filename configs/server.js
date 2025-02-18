@@ -7,7 +7,7 @@ import morgan from "morgan"
 import { dbConnection } from './mongo.js'
 import authRoutes from "../src/auth/auth.route.js"
 import userRoutes from "../src/user/user.route.js"
-import categoriaRoutes from "../src/categoria/categoria.route.js"
+import categoriaRoutes from "../src/categoria/categoria.routes.js"
 import apiLimiter from '../src/middlewares/validar-cant-peticiones.js'
 
 const middlewares = (app) =>{

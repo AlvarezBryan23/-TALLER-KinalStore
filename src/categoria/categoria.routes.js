@@ -5,3 +5,5 @@ import { createCategoriaValidator } from "../middlewares/categoria-validator.js"
 const router = Router()
 
 router.post("/addCategoria", createCategoriaValidator, saveCategoria)
+
+export default router
