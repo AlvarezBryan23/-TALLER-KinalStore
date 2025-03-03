@@ -5,9 +5,9 @@ import cors from "cors"
 import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from './mongo.js'
+import { saveAdmin } from "../src/admin/admin-controller.js"
 import authRoutes from "../src/auth/auth.route.js"
 import userRoutes from "../src/user/user.route.js"
-import categoriaRoutes from "../src/categoria/categoria.route.js"
 import apiLimiter from '../src/middlewares/validar-cant-peticiones.js'
 
 const middlewares = (app) =>{
@@ -22,12 +22,12 @@ const middlewares = (app) =>{
 const routes = (app) =>{
     app.use("/kinalStore/v1/auth", authRoutes)
     app.use("/kinalStore/v1/user", userRoutes)
-    app.use("/kinalStore/v1/categoria", categoriaRoutes)
 }
 
 const ConnectarDB = async() =>{
     try{
         await dbConnection()
+        await saveAdmin()
     }catch(err){
         console.log(`Database connection failed: ${err}`)
     }
