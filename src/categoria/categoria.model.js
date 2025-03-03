@@ -2,7 +2,7 @@ import { Schema, model } from "mongoose";
 
 const categoriaSchema = Schema({
     categoria:{
-        type:String,
+        type: String,
         required: true,
         enum:["ELECTRONICA", "ROPA", "HOGAR_COCINA", "JUGUETES", "DEPORTE", "MUSICA", 
             "ALIMENTOS", "PELICULAS", "LIBROS", "ACCESORIOS"]
@@ -10,7 +10,7 @@ const categoriaSchema = Schema({
     description:{
         type: String,
         required: [true, "Description is required"],
-        maxLength: [25, "Description cannot exced 25 characters"]
+        maxLength: [200, "Description cannot exced 200 characters"]
     },
     status:{
         type:Boolean,

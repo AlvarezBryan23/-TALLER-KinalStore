@@ -1,4 +1,4 @@
-"use strict"
+
 
 import Categoria from "../categoria/categoria.model.js"
 
@@ -6,6 +6,7 @@ import Categoria from "../categoria/categoria.model.js"
 export const saveCategoria = async(req, res) =>{
     try{
         const data = req.body
+
         const categoria = new Categoria({
             ...data,
         })
@@ -20,7 +21,7 @@ export const saveCategoria = async(req, res) =>{
         res.status(500).json({
             success: false,
             message: "Error al guardar una categoria",
-            err
+            error: err.message
         })
     }
 }

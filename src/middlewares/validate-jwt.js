@@ -1,14 +1,14 @@
 import jwt from "jsonwebtoken"
-import User from "../user/user.model.js"
+import Admin from "../admin/admin-model.js"
 
 export const validateJWT = async(req, res, next) =>{
     try{
         let token = req.body.token || req.query.token || req.headers["authorization"]
 
         if(!token){
-            res.status(400).json({
+            return res.status(400).json({
                 success: false,
-                message: "No existe token en la validacion"
+                message: "No existe token en la validación"
             })
         }
 
@@ -16,23 +16,23 @@ export const validateJWT = async(req, res, next) =>{
 
         const { uid } = jwt.verify(token, process.env.SECRET_KEY)
 
-        const user = await User.findById(uid)
+        const admin = await Admin.findById(uid)
 
-        if(!user){
+        if(!admin){
             return res.status(400).json({
                 success: false,
-                message: "El user no existe en la base de datos"
+                message: "El admi no existe en la base de datos"
             })
         }
 
-        if(user.status === false){
+        if(admin.status === false){
             return res.status(400).json({
-                success: false,
-                message: "El admin si esta"
+                sucess: false,
+                message: "El admin esta inactivo"
             })
         }
 
-        req.user = user,
+        req.admin = admin,
         next()
     }catch(err){
         return res.status(500).json({
