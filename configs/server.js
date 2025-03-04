@@ -9,6 +9,7 @@ import { saveAdmin } from "../src/admin/admin-controller.js"
 import authRoutes from "../src/auth/auth.route.js"
 import userRoutes from "../src/user/user.route.js"
 import categoriaRoutes from "../src/categoria/categoria.route.js"
+import productoRoutes from "../src/producto/producto.routes.js"
 import apiLimiter from '../src/middlewares/validar-cant-peticiones.js'
 
 const middlewares = (app) =>{
@@ -24,6 +25,7 @@ const routes = (app) =>{
     app.use("/kinalStore/v1/auth", authRoutes)
     app.use("/kinalStore/v1/user", userRoutes)
     app.use("/kinalStore/v1/categoria", categoriaRoutes)
+    app.use("/kinalStore/v1/producto", productoRoutes)
 }
 
 const ConnectarDB = async() =>{

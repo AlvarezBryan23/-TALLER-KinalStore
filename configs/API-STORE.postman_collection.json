@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5c240a2c-d640-4878-a866-f7751172b004",
+		"_postman_id": "429fa670-b3ab-42c4-a34c-bf1ea8ea6be5",
 		"name": "API-STORE",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "37585469"
@@ -25,17 +25,17 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "Luna",
+											"value": "Luis",
 											"type": "text"
 										},
 										{
 											"key": "surname",
-											"value": "Espuma",
+											"value": "Json",
 											"type": "text"
 										},
 										{
 											"key": "username",
-											"value": "LEspuma",
+											"value": "Ljson",
 											"type": "text"
 										},
 										{
@@ -45,7 +45,7 @@
 										},
 										{
 											"key": "email",
-											"value": "LEspuma@gmail.com",
+											"value": "Ljson@gmail.com",
 											"type": "text"
 										},
 										{
@@ -79,7 +79,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"lLizandro\",\r\n    \"password\": \"Bry22an$\"\r\n}",
+									"raw": "{\r\n    \"username\": \"Ljson\",\r\n    \"password\": \"Bry22an$\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -87,6 +87,24 @@
 									}
 								},
 								"url": "http://localhost:3009/kinalStore/v1/auth/login"
+							},
+							"response": []
+						},
+						{
+							"name": "Login A",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"B.Alvarez\",\r\n    \"password\": \"Bry22an$\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3009/kinalStore/v1/auth/loginA"
 							},
 							"response": []
 						}
@@ -213,6 +231,94 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Agregar Categorias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YjFjZDdmMGVhMzdmODQxZTMwOWUiLCJpYXQiOjE3NDEwNzQ5MzQsImV4cCI6MTc0MTA3ODUzNH0.HsF5wuv7AaaN42aGAdW-H3oifikmrGJ_VbUCXYzAiVw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoria\": \"ELECTRONICA\",\r\n    \"description\": \"Compras libros con nuestras ofertas y mejora tu lectura\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3009/kinalStore/v1/categoria/addCategoria"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3009/kinalStore/v1/categoria/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Mejora tu salud con nostros\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3009/kinalStore/v1/categoria/updateCategoria/67c68baecc3bd6f5122e4e35"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3009/kinalStore/v1/categoria/deleteCategoria/67c68c1bcc3bd6f5122e4e41"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "Add Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Focos\",\r\n    \"description\": \"Focos de 45W par ahorro\",\r\n    \"precio\": 150.20,\r\n    \"marca\": \"DALL\",\r\n    \"email\": \"Ljson@gmail.com\",\r\n    \"categoria\": \"ELECTRONICA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3009/kinalStore/v1/producto/addProducto"
+					},
+					"response": []
 				}
 			]
 		}
