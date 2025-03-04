@@ -48,3 +48,45 @@ export const listCategoria = async(req, res) =>{
         })
     }
 }
+
+export const updateCategoria = async(req, res) =>{
+    try{
+        const { no } = req.params;
+        const data = req.body;
+
+        const categoria = await Categoria.findByIdAndUpdate(no, data, {new:true})
+
+        res.status(200).json({
+            success: true,
+            message: "Categoria actualizada",
+            categoria
+        })
+    }catch(err){
+        res.status(500).json({
+            success: false,
+            message: "Error al actualizar la categoria",
+            error: err.message
+        });
+    }
+}
+
+export const deleteCategoria = async(req, res) =>{
+    try{
+        const {no} = req.params
+
+        const categoria = await Categoria.findByIdAndUpdate(no, {status: false}, {new: false})
+
+        return res.status(200).json({
+            success: true,
+            message: "Categoria Eliminada",
+            categoria
+        })
+        
+    }catch(err){
+        return res.status(500).json({
+            success: false,
+            message: "Error al eliminar la categoria",
+            error: err.message
+        })
+    }
+}
