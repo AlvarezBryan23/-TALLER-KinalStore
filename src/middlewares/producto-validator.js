@@ -9,3 +9,9 @@ export const saveProductoValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const buscarProductoValidator = [
+    body("name").isString().withMessage("No es un nombre válido"),
+    validarCampos,
+    handleErrors
+]

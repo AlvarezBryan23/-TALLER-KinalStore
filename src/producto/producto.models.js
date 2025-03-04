@@ -19,13 +19,13 @@ const productoSchema = Schema({
         required: [true, "Name is required"],
         maxLength: [25, "Name cannot exceed 25 characters"] 
     },
-    keeper:{
-        type: Schema.Types.ObjectId,
-        ref: 'user',
-    },
     kep:{
         type: Schema.Types.ObjectId,
         ref: 'categoria'
+    },
+    status:{
+        type: Boolean,
+        default: true
     }
 })
 

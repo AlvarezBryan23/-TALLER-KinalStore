@@ -243,7 +243,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YjFjZDdmMGVhMzdmODQxZTMwOWUiLCJpYXQiOjE3NDEwNzQ5MzQsImV4cCI6MTc0MTA3ODUzNH0.HsF5wuv7AaaN42aGAdW-H3oifikmrGJ_VbUCXYzAiVw"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ODQwNGMzYWVlNzY0ZDM2ZTc2YWUiLCJpYXQiOjE3NDExMjg3NTUsImV4cCI6MTc0MTEzMjM1NX0.mogRAbWSgNlgf9qvbvvJKLcV6cAEHvaZxpiFrfKlJi4"
 							}
 						},
 						"method": "POST",
@@ -309,7 +309,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Focos\",\r\n    \"description\": \"Focos de 45W par ahorro\",\r\n    \"precio\": 150.20,\r\n    \"marca\": \"DALL\",\r\n    \"email\": \"Ljson@gmail.com\",\r\n    \"categoria\": \"ELECTRONICA\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Albunes y Discos\",\r\n    \"description\": \"Tanto lo nuevo como lo viejo escuchalo aqui\",\r\n    \"precio\": 98.35,\r\n    \"marca\": \"RPM\",\r\n    \"categoria\": \"ELECTRONICA\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -317,6 +317,36 @@
 							}
 						},
 						"url": "http://localhost:3009/kinalStore/v1/producto/addProducto"
+					},
+					"response": []
+				},
+				{
+					"name": "buscar Producto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Albunes y Discos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3009/kinalStore/v1/producto/buscarProducto"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Catalogo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3009/kinalStore/v1/producto/"
 					},
 					"response": []
 				}
