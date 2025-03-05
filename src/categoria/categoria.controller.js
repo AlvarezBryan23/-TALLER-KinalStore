@@ -25,7 +25,7 @@ export const saveCategoria = async(req, res) =>{
 
 export const listCategoria = async(req, res) =>{
     try{
-        const { limite = 11, desde = 0 } = req.query
+        const { limite = 3, desde = 0 } = req.query
         const query = {status: true}
 
         const [total, categoria ] = await Promise.all([
@@ -74,7 +74,7 @@ export const deleteCategoria = async(req, res) =>{
     try{
         const {no} = req.params
 
-        const categoria = await Categoria.findByIdAndUpdate(no, {status: false}, {new: false})
+        const categoria = await Categoria.findByIdAndUpdate(no, {status: true}, {new: false})
 
         return res.status(200).json({
             success: true,

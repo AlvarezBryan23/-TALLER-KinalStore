@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { buscarProducto, listarProducto, saveProducto } from "./producto.controller.js";
-import { buscarProductoValidator, saveProductoValidator } from "../middlewares/producto-validator.js";
+import { buscarProducto, deleteProducto, listarProducto, saveProducto, updateProducto } from "./producto.controller.js";
+import { buscarProductoValidator, deleteProductoValidator, saveProductoValidator, updateProductoValidator } from "../middlewares/producto-validator.js";
 
 const router = Router()
 
@@ -10,4 +10,8 @@ router.get("/buscarProducto", buscarProductoValidator, buscarProducto)
 
 router.get("/", listarProducto)
 
-export default router;
+router.put("/updateProducto/:num", updateProductoValidator, updateProducto)
+
+router.delete("/deleteProducto/:num", deleteProductoValidator, deleteProducto)
+
+export default router;  

@@ -15,3 +15,17 @@ export const buscarProductoValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const updateProductoValidator = [
+    param("num", "No es un ID válido").isMongoId(),
+    param("num").custom(productoExits),
+    validarCampos,
+    handleErrors
+]
+
+export const deleteProductoValidator = [
+    param("num").isMongoId().withMessage("No es un ID válido"),
+    param("num").custom(productoExits),
+    validarCampos,
+    handleErrors
+]

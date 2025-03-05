@@ -87,3 +87,44 @@ export const listarProducto = async(req, res) =>{
         })
     }
 }
+
+export const updateProducto = async(req, res) =>{
+    try{
+        const { num } = req.params;
+        const data = req.body;
+
+        const producto = await Producto.findByIdAndUpdate(num, data, {new:true})
+
+        res.status(200).json({
+            success: true,
+            message: "Producto Actualizado",
+            producto
+        })
+    }catch(err){
+        res.status(500).json({
+            success: false,
+            message: "Error al actualizar el producto",
+            error: err.message
+        })
+    }
+}
+
+export const deleteProducto = async(req, res) =>{
+    try{
+        const {num} = req.params
+
+        const producto = await Producto.findByIdAndUpdate(num, {status: false}, {new: false})
+
+        return res.status(200).json({
+            success: true,
+            message: "Producto Eliminado",
+            producto
+        })
+    }catch(err){
+        return res.status(500).json({
+            success: false,
+            message: "Error al eliminar el producto",
+            error: err.message
+        })
+    }
+}
