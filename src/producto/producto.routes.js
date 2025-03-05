@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { buscarProducto, deleteProducto, listarProducto, saveProducto, updateProducto } from "./producto.controller.js";
+import { buscarProducto, deleteProducto, listarProducto, productoListarOrden, saveProducto, updateProducto } from "./producto.controller.js";
 import { buscarProductoValidator, deleteProductoValidator, saveProductoValidator, updateProductoValidator } from "../middlewares/producto-validator.js";
 
 const router = Router()
@@ -140,5 +140,7 @@ router.put("/updateProducto/:num", updateProductoValidator, updateProducto)
  *         description: Product not found
  */
 router.delete("/deleteProducto/:num", deleteProductoValidator, deleteProducto)
+
+router.get("/list", productoListarOrden)
 
 export default router;

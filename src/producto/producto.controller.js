@@ -64,7 +64,7 @@ export const buscarProducto = async(req, res) =>{
 
 export const listarProducto = async(req, res) =>{
     try{
-        const { limite = 1, desde = 0 } = req.query
+        const { limite = 6, desde = 0 } = req.query
         const query = { status: true }
         
         const [total, productos ] = await Promise.all([
@@ -124,6 +124,47 @@ export const deleteProducto = async(req, res) =>{
         return res.status(500).json({
             success: false,
             message: "Error al eliminar el producto",
+            error: err.message
+        })
+    }
+}
+
+export const productoListarOrden = async(req, res)=>{
+    try{
+        const { limit = 5, from = 0 } = req.query;
+        const { listarOrden } = req.body; // Recibe el criterio de orden desde raw o form-data
+        const query = { status: true };
+
+        let ordenOptions = {};
+
+        switch (listarOrden) {
+            case 'categoria': 
+            ordenOptions = { name: 1 }; // Ordena por nombre (A-Z)
+                break;
+            case 'vendido': 
+            ordenOptions = { precio: -1 }; // Ordena por nombre (Z-A)
+                break;
+            default: 
+            ordenOptions = { createdAt: -1 }; // Orden por defecto (más recientes primero)
+        }
+
+        const [total, productos] = await Promise.all([
+            Producto.countDocuments(query),
+            Producto.find(query)
+                .sort(ordenOptions)
+                .skip(Number(from))
+                .limit(Number(limit))
+        ]);
+
+        return res.status(200).json({
+            success: true,
+            total,
+            productos
+        })
+    }catch(err){
+        return res.status(500).json({
+            success: false,
+            message: "Error al listar el producto",
             error: err.message
         })
     }
