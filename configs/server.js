@@ -11,6 +11,7 @@ import userRoutes from "../src/user/user.route.js"
 import categoriaRoutes from "../src/categoria/categoria.route.js"
 import productoRoutes from "../src/producto/producto.routes.js"
 import apiLimiter from '../src/middlewares/validar-cant-peticiones.js'
+import carritoRoutes from "../src/carrito/carrito-routes.js"
 import { swaggerDocs, swaggerUi } from './swagger.js'
 
 const middlewares = (app) =>{
@@ -41,6 +42,7 @@ const routes = (app) =>{
     app.use("/kinalStore/v1/user", userRoutes)
     app.use("/kinalStore/v1/categoria", categoriaRoutes)
     app.use("/kinalStore/v1/producto", productoRoutes)
+    app.use("/kinalStore/v1/carro", carritoRoutes)
     app.use("/KinalStore/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
