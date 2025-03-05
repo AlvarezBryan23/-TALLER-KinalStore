@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "67c8af70ca3cccb1d755b19f"
+  },
+  "name": "Luis",
+  "surname": "Json",
+  "username": "Ljson",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$wDM14RjMe0oyMAor90t5Uw$fYfC6fVxjXlVNDn+gOKD7KNn5NecS2U/dngVC9JYadQ",
+  "email": "Ljson@gmail.com",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "CLIENT_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b64747af2f8d8962a206"
+  },
+  "name": "Alfredo",
+  "surname": "Hernandez",
+  "username": "AHernandez",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$lVNnIQN6wyfVoheRvax4Cg$kyipezyiAu9TIwtC41Cu1pe9yKiNrAzop9qQGIgoxio",
+  "email": "Ahernandez@gmail.com",
+  "profilePicture": "caracteristicas de los seres vivos-1741207111145.png",
+  "phone": "12345678",
+  "role": "CLIENT_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b69a47af2f8d8962a209"
+  },
+  "name": "Michel",
+  "surname": "Jordan",
+  "username": "MJordan",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$7uNAOk0mId2X5ghNRpHNzw$WtALB7KCW7wdKEj35FcidTuIB4aeKWqo8OAgVHRUcmI",
+  "email": "Mjordan.22@gmail.com",
+  "profilePicture": "caracteristicas de los seres vivos-1741207194295.png",
+  "phone": "12345678",
+  "role": "CLIENT_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b6fe47af2f8d8962a20c"
+  },
+  "name": "Ceferino",
+  "surname": "Rodriguez",
+  "username": "CefeRodriguez",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ext5vPkODaSmMpIsZ6I0Kw$4YIkWr9xn89iZBWX5ffFvwohIRvSbSsnEI3CPz6jg9o",
+  "email": "DUDAS@gmail.com",
+  "profilePicture": "caracteristicas de los seres vivos-1741207294385.png",
+  "phone": "12345678",
+  "role": "CLIENT_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b72a47af2f8d8962a20f"
+  },
+  "name": "Alexander",
+  "surname": "Mayen",
+  "username": "AMayen",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$Nn1GG01pagGO9jbPRIVA4Q$j+RNjttS0NSWrUeD/+/ItZXBLiBsosIoEDBb41thgwY",
+  "email": "AlexMayen@gmail.com",
+  "profilePicture": "caracteristicas de los seres vivos-1741207338649.png",
+  "phone": "12345678",
+  "role": "CLIENT_ROLE",
+  "status": true
+}]

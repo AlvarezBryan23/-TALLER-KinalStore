@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "67c78404c3aee764d36e76ae"
+  },
+  "name": "Bryan",
+  "surname": "Alvarez",
+  "username": "B.Alvarez",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ya1700x283BEbln5FopzpA$1V/4MUC286c8IeUpz902jWeFSLCISPa72gHIsm6fkfE",
+  "email": "balvarez-2023244@kinal.edu.gt",
+  "phone": "36101639",
+  "role": "ADMIN_ROLE",
+  "status": true
+}]

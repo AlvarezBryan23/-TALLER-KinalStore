@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "67c8afe847af2f8d8962a1c9"
+  },
+  "categoria": "LIBROS",
+  "description": "Compras libros con nuestras ofertas y mejora tu lectura",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b00347af2f8d8962a1cc"
+  },
+  "categoria": "ACCESORIOS",
+  "description": "Todo para dama y caballero, Gorras, cadenas, anillos etc.",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b02047af2f8d8962a1cf"
+  },
+  "categoria": "PELICULAS",
+  "description": "Ve nuestras peliculas más recientes y nuevos estrenos junto con series.",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b03747af2f8d8962a1d2"
+  },
+  "categoria": "ALIMENTOS",
+  "description": "Mejora tu cara de cocina con nuestros mejores alimentos",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b05147af2f8d8962a1d5"
+  },
+  "categoria": "MUSICA",
+  "description": "Escucha tu musica favorita y compras sus disco más relevantes",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b08047af2f8d8962a1d8"
+  },
+  "categoria": "DEPORTE",
+  "description": "Consegui camisas de futbol y todo lo que quieras de deporte",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b0b147af2f8d8962a1db"
+  },
+  "categoria": "JUGUETES",
+  "description": "Compras tus juguetes favoritos con las mejores marcas",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b0ce47af2f8d8962a1de"
+  },
+  "categoria": "HOGAR_COCINA",
+  "description": "Remodela tu cocina y mejorala",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b0e747af2f8d8962a1e1"
+  },
+  "categoria": "ROPA",
+  "description": "Ropa dama, caballero y niño de toda clase de tallas",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c8b0fb47af2f8d8962a1e4"
+  },
+  "categoria": "ELECTRONICA",
+  "description": "Todo en electronicapara tu casa",
+  "status": true
+}]

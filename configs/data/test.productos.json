@@ -1,0 +1,140 @@
+[{
+  "_id": {
+    "$oid": "67c8b19547af2f8d8962a1e7"
+  },
+  "name": "Todo en vestimenta",
+  "description": "Toda clse de tallas",
+  "precio": 90.99,
+  "marca": "Luis witon",
+  "kep": {
+    "$oid": "67c8b0e747af2f8d8962a1e1"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b1c047af2f8d8962a1ea"
+  },
+  "name": "Focos led",
+  "description": "Ilumina tu cuarto",
+  "precio": 90.99,
+  "marca": "ELEKTRA",
+  "kep": {
+    "$oid": "67c8b0fb47af2f8d8962a1e4"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b24147af2f8d8962a1ed"
+  },
+  "name": "Cuchillo de carne",
+  "description": "Mejora tu calidad de cuchillos",
+  "precio": 56.98,
+  "marca": "LACOCINA",
+  "kep": {
+    "$oid": "67c8b0ce47af2f8d8962a1de"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b28a47af2f8d8962a1f0"
+  },
+  "name": "Juguete de Woody",
+  "description": "Juguete de coleccion de Story",
+  "precio": 253.32,
+  "marca": "JUGUETON",
+  "kep": {
+    "$oid": "67c8b0b147af2f8d8962a1db"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b2d147af2f8d8962a1f3"
+  },
+  "name": "Camisa de Messi",
+  "description": "La camisa de el GOAT",
+  "precio": 290.52,
+  "marca": "NIKE",
+  "kep": {
+    "$oid": "67c8b08047af2f8d8962a1d8"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b2fe47af2f8d8962a1f6"
+  },
+  "name": "Album de mon Laferte",
+  "description": "Album de Mon Laferte Vol.2",
+  "precio": 398.75,
+  "marca": "RPM",
+  "kep": {
+    "$oid": "67c8b05147af2f8d8962a1d5"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b34447af2f8d8962a1f9"
+  },
+  "name": "Langosta precio",
+  "description": "Comida de Marisco",
+  "precio": 650.75,
+  "marca": "Santa Marina",
+  "kep": {
+    "$oid": "67c8b03747af2f8d8962a1d2"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b39d47af2f8d8962a1fc"
+  },
+  "name": "Los Simpson",
+  "description": "La peli de los simpson",
+  "precio": 90.75,
+  "marca": "FOX",
+  "kep": {
+    "$oid": "67c8b02047af2f8d8962a1cf"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b3bf47af2f8d8962a1ff"
+  },
+  "name": "El Padrino",
+  "description": "El libro más basado",
+  "precio": 90.75,
+  "marca": "LIBRO",
+  "kep": {
+    "$oid": "67c8afe847af2f8d8962a1c9"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b3ff47af2f8d8962a202"
+  },
+  "name": "Gorra Plana",
+  "description": "Gorra de los Lakers",
+  "precio": 250.75,
+  "marca": "SI",
+  "kep": {
+    "$oid": "67c8b00347af2f8d8962a1cc"
+  },
+  "status": true,
+  "__v": 0
+}]
