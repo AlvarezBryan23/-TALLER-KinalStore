@@ -11,12 +11,27 @@ import userRoutes from "../src/user/user.route.js"
 import categoriaRoutes from "../src/categoria/categoria.route.js"
 import productoRoutes from "../src/producto/producto.routes.js"
 import apiLimiter from '../src/middlewares/validar-cant-peticiones.js'
+import { swaggerDocs, swaggerUi } from './swagger.js'
 
 const middlewares = (app) =>{
     app.use(express.urlencoded({extended: false}))
     app.use(express.json())
-    app.use(cors())
-    app.use(helmet())
+    app.use(cors({
+        origin: '*', 
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+        allowedHeaders: ['Content-Type', 'Authorization']
+    }));
+    app.use(helmet({
+        contentSecurityPolicy: {
+            directives: {
+                defaultSrc: ["'self'"],
+                scriptSrc: ["'self'", "'unsafe-inline'", `http://localhost:${process.env.PORT}`],
+                connectSrc: ["'self'", `http://localhost:${process.env.PORT}`],
+                imgSrc: ["'self'", "data:"],
+                styleSrc: ["'self'", "'unsafe-inline'"],
+            },
+        },
+    }));
     app.use(morgan("dev"))
     app.use(apiLimiter)
 }
@@ -26,6 +41,7 @@ const routes = (app) =>{
     app.use("/kinalStore/v1/user", userRoutes)
     app.use("/kinalStore/v1/categoria", categoriaRoutes)
     app.use("/kinalStore/v1/producto", productoRoutes)
+    app.use("/KinalStore/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
 const ConnectarDB = async() =>{
