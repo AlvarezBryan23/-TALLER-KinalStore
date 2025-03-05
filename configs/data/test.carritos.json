@@ -1,0 +1,119 @@
+[{
+  "_id": {
+    "$oid": "67c8b93047af2f8d8962a213"
+  },
+  "Usuario": {
+    "$oid": "67c8b6fe47af2f8d8962a20c"
+  },
+  "Product": {
+    "$oid": "67c8b1c047af2f8d8962a1ea"
+  },
+  "fecha": {
+    "$date": "2025-05-03T06:00:00.000Z"
+  },
+  "description": "Se guardara por un tiempo",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b96347af2f8d8962a217"
+  },
+  "Usuario": {
+    "$oid": "67c8b6fe47af2f8d8962a20c"
+  },
+  "Product": {
+    "$oid": "67c8b1c047af2f8d8962a1ea"
+  },
+  "fecha": {
+    "$date": "2025-06-03T06:00:00.000Z"
+  },
+  "description": "Se guardara por un tiempo",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b97d47af2f8d8962a21b"
+  },
+  "Usuario": {
+    "$oid": "67c8b6fe47af2f8d8962a20c"
+  },
+  "Product": {
+    "$oid": "67c8b19547af2f8d8962a1e7"
+  },
+  "fecha": {
+    "$date": "2025-06-03T06:00:00.000Z"
+  },
+  "description": "Se guardara por un tiempo",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b98a47af2f8d8962a21f"
+  },
+  "Usuario": {
+    "$oid": "67c8b6fe47af2f8d8962a20c"
+  },
+  "Product": {
+    "$oid": "67c8b24147af2f8d8962a1ed"
+  },
+  "fecha": {
+    "$date": "2025-06-03T06:00:00.000Z"
+  },
+  "description": "Se guardara por un tiempo",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b9b247af2f8d8962a223"
+  },
+  "Usuario": {
+    "$oid": "67c8b72a47af2f8d8962a20f"
+  },
+  "Product": {
+    "$oid": "67c8b3bf47af2f8d8962a1ff"
+  },
+  "fecha": {
+    "$date": "2025-06-03T06:00:00.000Z"
+  },
+  "description": "Se guardara por un tiempo",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b9bb47af2f8d8962a227"
+  },
+  "Usuario": {
+    "$oid": "67c8b72a47af2f8d8962a20f"
+  },
+  "Product": {
+    "$oid": "67c8b3ff47af2f8d8962a202"
+  },
+  "fecha": {
+    "$date": "2025-06-03T06:00:00.000Z"
+  },
+  "description": "Se guardara por un tiempo",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8b9ce47af2f8d8962a22b"
+  },
+  "Usuario": {
+    "$oid": "67c8b69a47af2f8d8962a209"
+  },
+  "Product": {
+    "$oid": "67c8b3ff47af2f8d8962a202"
+  },
+  "fecha": {
+    "$date": "2025-06-03T06:00:00.000Z"
+  },
+  "description": "Se guardara por un tiempo",
+  "status": true,
+  "__v": 0
+}]

@@ -127,7 +127,7 @@ export const deleteProducto = async(req, res) =>{
             error: err.message
         })
     }
-}
+}   
 
 export const productoListarOrden = async(req, res)=>{
     try{

@@ -25,17 +25,17 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "Luis",
+											"value": "Alexander",
 											"type": "text"
 										},
 										{
 											"key": "surname",
-											"value": "Json",
+											"value": "Mayen",
 											"type": "text"
 										},
 										{
 											"key": "username",
-											"value": "Ljson",
+											"value": "AMayen",
 											"type": "text"
 										},
 										{
@@ -45,7 +45,7 @@
 										},
 										{
 											"key": "email",
-											"value": "Ljson@gmail.com",
+											"value": "AlexMayen@gmail.com",
 											"type": "text"
 										},
 										{
@@ -56,7 +56,7 @@
 										{
 											"key": "profilePicture",
 											"type": "file",
-											"src": "/C:/Users/Informatica/Pictures/Screenshots/Captura de pantalla 2025-02-04 103529.png"
+											"src": "/C:/Users/Informatica/Downloads/caracteristicas de los seres vivos.png"
 										},
 										{
 											"key": "phone",
@@ -243,14 +243,14 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ODQwNGMzYWVlNzY0ZDM2ZTc2YWUiLCJpYXQiOjE3NDExMjg3NTUsImV4cCI6MTc0MTEzMjM1NX0.mogRAbWSgNlgf9qvbvvJKLcV6cAEHvaZxpiFrfKlJi4"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ODQwNGMzYWVlNzY0ZDM2ZTc2YWUiLCJpYXQiOjE3NDEyMDU0NzAsImV4cCI6MTc0MTIwOTA3MH0.DfRG4dauGLVKzqdLymU--Acqth-VJWklV0eyFTQcDIo"
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoria\": \"ELECTRONICA\",\r\n    \"description\": \"Compras libros con nuestras ofertas y mejora tu lectura\"\r\n}",
+							"raw": "{\r\n    \"categoria\": \"ELECTRONICA\",\r\n    \"description\": \"Todo en electronicapara tu casa\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -309,7 +309,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Albunes y Discos\",\r\n    \"description\": \"Tanto lo nuevo como lo viejo escuchalo aqui\",\r\n    \"precio\": 98.35,\r\n    \"marca\": \"RPM\",\r\n    \"categoria\": \"ELECTRONICA\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Gorra Plana\",\r\n    \"description\": \"Gorra de los Lakers\",\r\n    \"precio\": 250.75,\r\n    \"marca\": \"SI\",\r\n    \"categoria\": \"ACCESORIOS\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -330,7 +330,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Albunes y Discos\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Gorra Plana\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -347,6 +347,77 @@
 						"method": "GET",
 						"header": [],
 						"url": "http://localhost:3009/kinalStore/v1/producto/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Discos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3009/kinalStore/v1/producto/updateProducto/67c7bda54838075d4bd8e72e"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3009/kinalStore/v1/producto/deleteProducto/67c7bda54838075d4bd8e72e"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Orden",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"listarOrden\": \"vendido\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3009/kinalStore/v1/producto/list"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carro",
+			"item": [
+				{
+					"name": "Agregar al carro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Mjordan.22@gmail.com\",\r\n    \"name\": \"Gorra Plana\",\r\n    \"fecha\": \"06/03/2025\",\r\n    \"description\": \"Se guardara por un tiempo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3009/kinalStore/v1/carro/saveCarrito"
 					},
 					"response": []
 				}
